@@ -1,0 +1,11 @@
+spring:
+  applicaton:
+    name: admin
+  cloud:
+    kubernetes:
+      discovery:
+        all-namespaces: true
+        service-labels:
+          spring-boot: true
+
+spring.cloud.kubenetes.client.namespace: test

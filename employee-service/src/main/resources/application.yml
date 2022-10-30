@@ -3,12 +3,15 @@ spring:
     name: employee
   data:
     mongodb:
-      uri: mongodb://${MONGO_USERNAME}:${MONGO_PASSWORD}@mongodb.default/${MONGO_DATABASE}
+      uri: mongodb://${MONGO_USERNAME}:${MONGO_PASSWORD}@mongodb/${MONGO_DATABASE}
   output.ansi.enabled: ALWAYS
 
 logging:
   pattern: 
     console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
+
+spring.boot.admin.client.url: "http://admin:8080" 
+spring.boot.admin.client.instance.prefer-ip: true
 
 management:
   endpoints:
